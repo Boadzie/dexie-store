@@ -1,4 +1,4 @@
-<section class="container mx-auto px-1 py-1">
+<section class="container mx-auto px-1 py-2">
     <div class="grid grid-cols-1 lg:grid-rows-2 lg:grid-cols-4 gap-1">
         <div class="lg:col-span-2 lg:row-span-2 relative ">
             <img class="rounded-sm object-cover object-center h-[40.5rem] w-full"
