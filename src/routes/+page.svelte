@@ -6,7 +6,7 @@
     <div class="grid grid-cols-1 lg:grid-rows-2 lg:grid-cols-4 gap-1">
         <div class="lg:col-span-2 lg:row-span-2 relative ">
             <img class="rounded-sm object-cover object-center h-[40.5rem] w-full"
-                src="https://preview.colorlib.com/theme/ashion/img/categories/category-1.jpg" alt="pic">
+                src="img/category-1.webp" alt="pic">
             <div class="absolute left-[4rem] top-[14rem]">
                 <h2 class="text-6xl text-slate-800 ">Women's Fashion</h2>
                 <p class="my-4 max-w-md font-sans text-md text-slate-500">
@@ -15,53 +15,53 @@
                     Alias, facere dolore.
                 </p>
                 <button
-                    class="font-medium text-lg font-mono border-b-4 border-spacing-6 border-red-500 text-slate-800 uppercase">Shop
+                    class="font-medium text-lg font-sans rounded-sm bg-red-500 hover:bg-red-400 text-white px-4 py-1 uppercase">Shop
                     now
                 </button>
             </div>
         </div>
         <div
-            class="flex gap-4 flex-col items-start justify-center col-span-1 object-cover object-right h-[20rem] w-full bg-[url('https://preview.colorlib.com/theme/ashion/img/categories/category-2.jpg')]">
+            class="flex gap-4 flex-col items-start justify-center col-span-1 object-cover object-right h-[20rem] w-full bg-[url('img/category-2.webp')]">
             <div class="font-sans font-bold  mx-6">
                 <h1 class=" font-extrabold text-2xl text-slate-600">Men's Fashion</h1>
                 <p class="text-sm py-2 text-slate-500">435 items</p>
                 <button
-                    class="font-medium text-lg font-mono border-b-4 border-spacing-2 border-red-500 text-slate-800 uppercase">Shop
+                    class="font-medium text-lg font-sans rounded-sm bg-red-500 hover:bg-red-400 text-white px-4 py-1 uppercase">Shop
                     now
                 </button>
             </div>
         </div>
         <div
-            class="flex gap-4 flex-col items-start justify-center col-span-1 object-cover object-right h-[20rem] w-full bg-[url('https://preview.colorlib.com/theme/ashion/img/categories/category-3.jpg')]">
+            class="flex gap-4 flex-col items-start justify-center col-span-1 object-cover object-right h-[20rem] w-full bg-[url('img/category-3.webp')]">
             <div class="font-sans font-bold  mx-6">
                 <h1 class="font-extrabold text-slate-600 text-2xl ">Kid's Fashion</h1>
                 <p class="text-sm py-2 text-slate-500">43 items</p>
                 <button
-                    class="font-medium text-lg font-mono border-b-4 border-spacing-6 border-red-500 text-slate-800 uppercase">Shop
+                    class="font-medium text-lg font-sans rounded-sm bg-red-500 hover:bg-red-400 text-white px-4 py-1 uppercase">Shop
                     now
                 </button>
             </div>
         </div>
         <div
-            class="flex gap-4 flex-col items-start justify-center col-span-1 object-cover object-right h-[20rem] w-full bg-[url('https://preview.colorlib.com/theme/ashion/img/categories/category-4.jpg')]">
+            class="flex gap-4 flex-col items-start justify-center col-span-1 object-cover object-right h-[20rem] w-full bg-[url('img/category-4.webp')]">
 
             <div class="font-sans font-bold  mx-6">
                 <h1 class="font-extrabold text-slate-600 text-2xl ">Cosmetics</h1>
                 <p class="text-sm py-2 text-slate-500">200 items</p>
                 <button
-                    class="font-medium text-lg font-mono border-b-4 border-spacing-6 border-red-500 text-slate-800 uppercase">Shop
+                    class="font-medium text-lg font-sans rounded-sm bg-red-500 hover:bg-red-400 text-white px-4 py-1 uppercase">Shop
                     now
                 </button>
             </div>
         </div>
         <div
-            class="flex gap-4 flex-col items-start justify-center col-span-1 object-cover object-right h-[20rem] w-full bg-[url('https://preview.colorlib.com/theme/ashion/img/categories/category-5.jpg')]">
+            class="flex gap-4 flex-col items-start justify-center col-span-1 object-cover object-right h-[20rem] w-full bg-[url('img/category-5.webp')]">
 
             <div class="font-sans font-bold  mx-6">
                 <h1 class="font-extrabold text-slate-600 text-2xl ">Cosmetics</h1>
                 <p class="text-sm py-2 text-slate-500">200 items</p>
                 <button
-                    class="font-medium text-lg font-mono border-b-4 border-spacing-6 border-red-500 text-slate-800 uppercase">Shop
+                    class="font-medium text-lg font-sans rounded-sm bg-red-500 hover:bg-red-400 text-white px-4 py-1 uppercase">Shop
                     now
                 </button>
             </div>
