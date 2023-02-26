@@ -1,6 +1,7 @@
 <script>
 	import '../app.postcss';
 	import Navbar from "$lib/Navbar.svelte";
+	import Footer from "$lib/Footer.svelte";
 </script>
 
 <div class="flex flex-col justify-between">
@@ -8,6 +9,7 @@
 	<main>
 		<slot />
 	</main>
+	<Footer/>
 </div>
 
 
