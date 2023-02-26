@@ -68,5 +68,6 @@
         </div>
     </div>
 </section>
-<NewProducts/>
-
+<section id="shop">
+<NewProducts />
+</section>
