@@ -1,4 +1,4 @@
-<footer class="py-4 mt-5 shadow bg-white border-t-2">
+<footer class="py-4 mt-5 shadow bg-white border-t-2 static bottom-0">
 	<div class="lg:mx-12 mx-4 py-4 flex lg:flex-row flex-col gap-4 lg:justify-between items-center ">
 		<div class="flex flex-col items-start">
 			<h2 class="mb-4 text-3xl font-extrabold tracking-wider">Dexie-store</h2>
