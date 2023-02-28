@@ -42,16 +42,27 @@
 				<h2 class="my-2 text-lg text-slate-800 font-extrabold tracking-wide uppercase">
 					Newsletter
 				</h2>
-				<div class="my-4">
-					<input
-						class="w-full relative rounded-full p-3 ring-2 ring-slate-200 focus:outline-none"
-						type="text"
-					/>
-					<button
-						class="rounded-full mt-4 lg:mt-0 lg:absolute right-[3rem] bottom-[-108.045rem] px-6 bg-red-500 text-white py-[0.7rem] uppercase"
-						>Subscribe</button
-					>
+				<div class="flex flex-wrap items-center">
+					<div class="w-full  px-0 mb-4">
+						<form>
+							<div class="relative flex items-center ring-2  rounded-full py-2">
+								<input
+									class="appearance-none  bg-transparent border-none placeholder:px-0 w-full text-slate-400 mr-3 py-1 px-4 leading-tight focus:outline-none"
+									type="email"
+									placeholder="Enter your email"
+									aria-label="Email input"
+								/>
+								<button
+									class="absolute top-0 right-0 uppercase font-bold flex-shrink-0 bg-red-500 hover:bg-red-700 border-red-500 hover:border-red-700 text-sm border-4 text-white py-2 px-5 rounded-full"
+									type="button"
+								>
+									Subscribe
+								</button>
+							</div>
+						</form>
+					</div>
 				</div>
+
 				<div class="flex items-center justify-between gap-2">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
