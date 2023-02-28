@@ -8,21 +8,21 @@ db.version(2).stores({
 
 // db.products.bulkAdd([
 // 	{
-// 		name: 'Buttons blazer',
-// 		price: 74.9,
+// 		name: 'Buttons tweed blazer',
+// 		price: 54.9,
 // 		img_url: 'img/product-1.jpg',
-// 		rating: 2.5
+// 		rating: 4.5
 // 	},
 // 	{
-// 		name: 'Flowy  skirt',
-// 		price: 38.3,
+// 		name: 'Flowy striped skirt',
+// 		price: 64.3,
 // 		img_url: 'img/product-6.jpg',
 // 		rating: 3.5
 // 	},
 // 	{
-// 		name: 'Cotton Bag',
-// 		price: 29.4,
+// 		name: 'Cotton T-Shirt',
+// 		price: 64.9,
 // 		img_url: 'img/product-2.jpg',
-// 		rating: 4.5
+// 		rating: 3.5
 // 	}
 // ]);
