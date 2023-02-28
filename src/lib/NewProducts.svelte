@@ -6,7 +6,6 @@
 	let products = liveQuery(() => (browser ? db.products.toArray() : []));
 
 	let cart = [];
-	let quantity = 1;
 
 	const addToCart = async (product) => {
 		cart = [...cart, { ...product, quantity: 1 }];
