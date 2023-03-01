@@ -1,3 +1,17 @@
+<script>
+	import { onMount } from 'svelte';
+	import { writable } from 'svelte/store';
+	import { liveQuery } from 'dexie';
+	import { db } from '$lib/db';
+
+	$: cartLen = writable([]);
+	// $: cart = liveQuery(() => (browser ? db.cart.toArray() : []));
+	onMount(() => {
+		cartLen = liveQuery(() => db.cart.toArray());
+		console.log(cartLen);
+	});
+</script>
+
 <section class="w-full px-0 mx-0">
 	<nav class="flex lg:flex-row flex-col gap-y-4 items-center justify-between  w-full shadow-lg p-5">
 		<ul>
@@ -24,7 +38,7 @@
 		</ul>
 		<ul class="uppercase flex text-lg font-sans gap-x-4 items-center justify-end">
 			<li class="">
-				<a class="" href="/cart">
+				<a class="relative inline-block" href="/cart">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="hover:stroke-red-500 w-6 h-6 icon icon-tabler icon-tabler-shopping-cart"
@@ -40,8 +54,12 @@
 						<circle cx="17" cy="19" r="2" />
 						<path d="M17 17h-11v-14h-2" />
 						<path d="M6 5l14 1l-1 7h-13" />
-					</svg></a
-				>
+					</svg>
+					<span
+						class="absolute top-0 left-3 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-500 rounded-full"
+						>{$cartLen.length}</span
+					>
+				</a>
 			</li>
 		</ul>
 	</nav>
