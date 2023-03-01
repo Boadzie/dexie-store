@@ -34,10 +34,10 @@
 
 <section class="container mx-auto px-4  p-12">
 	<h2 class="text-4xl text-left my-4 mx-4 font-bold font-sans uppercase">Cart</h2>
-	<div class="flex lg:flex-row flex-col justify-start gap-4 w-full font-sans">
+	<div class="flex lg:flex-row flex-col justify-start gap-x-8 gap-y-4 w-full font-sans">
 		{#if $cart}
-			<div class="overflow-x-auto lg:w-5/6 w-full">
-				<table class="table-auto  shadow-md bg-white py-5 lg:mx-4">
+			<div class="overflow-x-auto lg:w-[80rem] w-full">
+				<table class="table-auto  shadow-md bg-white py-5 w-full">
 					<thead>
 						<tr class="uppercase">
 							<th class="lg:w-2/4  bg-slate-700 text-white border text-left px-8 py-4">Item</th>
@@ -115,11 +115,25 @@
 				</table>
 			</div>
 		{/if}
-		<div class="rounded-sm shadow bg-slate-200 h-[30rem] p-5 lg:w-1/2">
-			<h3 class="text-left uppercase text-3xl text-slate-500 font-bold my-4">Your Order</h3>
+		<div
+			class="rounded-sm flex flex-col justify-between shadow bg-slate-100 h-[20rem] p-5 lg:w-[4orem]"
+		>
+			<h3 class="text-left uppercase text-3xl text-slate-700 font-bold my-4">CART TOTAL</h3>
 			{#if $cart}
-				<p class="text-slate-500 text-2xl uppercase font-extrabold">
-					Grand Total: <span class="text-red-500 ">
+				<p
+					class="text-slate-500 inline-flex items-center gap-x-44 justify-between text-2xl  font-extrabold"
+				>
+					SubTotal: <span class="text-red-500 ">
+						{total().toLocaleString('en-US', {
+							style: 'currency',
+							currency: 'USD'
+						})}
+					</span>
+				</p>
+				<p
+					class="text-slate-500 inline-flex items-center gap-x-44 justify-between text-2xl  font-extrabold"
+				>
+					Total: <span class="text-red-500 ">
 						{total().toLocaleString('en-US', {
 							style: 'currency',
 							currency: 'USD'
@@ -127,6 +141,9 @@
 					</span>
 				</p>
 			{/if}
+			<button class="mt-6 focus:outline-none uppercase px-4 py-2 rounded-sm bg-red-500 text-white"
+				>Proceed to checkout</button
+			>
 		</div>
 	</div>
 </section>
