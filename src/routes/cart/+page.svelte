@@ -2,7 +2,6 @@
 	// import { onMount } from 'svelte';
 	import { liveQuery } from 'dexie';
 	import { db } from '$lib/db';
-	import { browser } from '$app/environment';
 	import { writable } from 'svelte/store';
 	import { onMount } from 'svelte';
 
@@ -81,7 +80,10 @@
 								</td>
 								<td class="border px-6 py-2">
 									<p class="font-extrabold text-red-500">
-										{(p.price * p.quantity).toFixed(2)}
+										{(p.price * p.quantity).toLocaleString('en-US', {
+											style: 'currency',
+											currency: 'USD'
+										})}
 									</p>
 								</td>
 								<td class="border-b  place-content-center  px-8 py-2 ">
@@ -108,7 +110,7 @@
 							</tr>
 						</tbody>
 					{:else}
-						<p class="text-slate-500 text-2xl">No items in cart</p>
+						<p class="text-slate-500 text-2xl p-5">No items in your cart</p>
 					{/each}
 				</table>
 			</div>
