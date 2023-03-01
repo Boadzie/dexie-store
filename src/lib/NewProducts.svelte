@@ -31,7 +31,7 @@
 					<div class="relative odd:content-['sale']">
 						<img class=" p-5 rounded-sm object-cover object-conter" src={p.img_url} alt="" />
 						<button
-							on:click={addToCart(p)}
+							on:click|once={addToCart(p)}
 							class="absolute text-sm font-extrabold font-sans text-white top-[4rem] px-2 rounded-bl-md left-[4rem] bg-slate-600 hover:bg-slate-500 hover:duration-500 -translate-x-1/2 -translate-y-1/2"
 						>
 							ADD TO CART</button
