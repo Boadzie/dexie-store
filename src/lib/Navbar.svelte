@@ -1,15 +1,5 @@
 <script>
-	import { onMount } from 'svelte';
-	import { writable } from 'svelte/store';
-	import { liveQuery } from 'dexie';
-	import { db } from '$lib/db';
-
-	$: cartLen = writable([]);
-	// $: cart = liveQuery(() => (browser ? db.cart.toArray() : []));
-	onMount(() => {
-		cartLen = liveQuery(() => db.cart.toArray());
-		console.log(cartLen);
-	});
+	import { cart } from './NewProducts.svelte';
 </script>
 
 <section class="w-full px-0 mx-0">
@@ -57,7 +47,7 @@
 					</svg>
 					<span
 						class="absolute top-0 left-3 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-500 rounded-full"
-						>{$cartLen.length}</span
+						>{$cart.length}</span
 					>
 				</a>
 			</li>
