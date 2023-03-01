@@ -1,13 +1,36 @@
 <script>
+	// import { onMount } from 'svelte';
 	import { liveQuery } from 'dexie';
 	import { db } from '$lib/db';
 	import { browser } from '$app/environment';
+	import { writable } from 'svelte/store';
+	import { onMount } from 'svelte';
 
-	$: cart = liveQuery(() => (browser ? db.cart.toArray() : []));
-	let qty = 1;
-	// $: total = (price) => {
-	// 	return price * qty;
-	// };
+	$: cart = writable([]);
+	// $: cart = liveQuery(() => (browser ? db.cart.toArray() : []));
+	onMount(() => {
+		cart = liveQuery(() => db.cart.toArray());
+	});
+
+	let qty = [];
+
+	$: removeFromCart = (item) => {
+		db.cart.delete(item.id);
+		$cart = $cart.filter((i) => i.id !== item.id);
+	};
+
+	$: update_cart = async (item, quantity) => {
+		await db.cart.update(item.id, { quantity });
+		// $cart = $cart.update((item) => item.quantity);
+	};
+
+	$: total = () => {
+		let total = 0;
+		$cart.forEach((item) => {
+			total += item.price * item.quantity;
+		});
+		return total;
+	};
 </script>
 
 <section class="container mx-auto px-4  p-12">
@@ -45,21 +68,25 @@
 										})}
 									</p>
 								</td>
-								<td class="border px-6 py-2">
-									<input
-										class="w-full focus:outline-none ring-1 px-2 py-1 rounded-sm"
-										type="number"
-										name=""
-										bind:value={$cart[p.quantity]}
-									/>
+								<td class="border px-2 py-2">
+									<form class="flex gap-x-2" action="">
+										<input
+											class="w-full focus:outline-none ring-1 px-2 py-1 rounded-sm"
+											type="number"
+											name=""
+											bind:value={p.quantity}
+											on:change={() => update_cart(p, p.quantity)}
+										/>
+									</form>
 								</td>
 								<td class="border px-6 py-2">
 									<p class="font-extrabold text-red-500">
-										{(p.price * parseInt(p.quantity)).toFixed(2)}
+										{(p.price * p.quantity).toFixed(2)}
 									</p>
 								</td>
 								<td class="border-b  place-content-center  px-8 py-2 ">
 									<button
+										on:click={removeFromCart(p)}
 										class="hover:fill-red-500 place-content-center h-full bg-slate-100 rounded-full p-2"
 									>
 										<svg
@@ -88,6 +115,16 @@
 		{/if}
 		<div class="rounded-sm shadow bg-slate-200 h-[30rem] p-5 lg:w-1/2">
 			<h3 class="text-left uppercase text-3xl text-slate-500 font-bold my-4">Your Order</h3>
+			{#if $cart}
+				<p class="text-slate-500 text-2xl uppercase font-extrabold">
+					Grand Total: <span class="text-red-500 ">
+						{total().toLocaleString('en-US', {
+							style: 'currency',
+							currency: 'USD'
+						})}
+					</span>
+				</p>
+			{/if}
 		</div>
 	</div>
 </section>
