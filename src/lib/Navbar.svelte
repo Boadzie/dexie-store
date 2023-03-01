@@ -24,7 +24,7 @@
 		</ul>
 		<ul class="uppercase flex text-lg font-sans gap-x-4 items-center justify-end">
 			<li class="">
-				<a class="" href="/">
+				<a class="" href="/cart">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="hover:stroke-red-500 w-6 h-6 icon icon-tabler icon-tabler-shopping-cart"
