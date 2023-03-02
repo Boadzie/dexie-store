@@ -8,19 +8,20 @@
 	// $: cart = liveQuery(() => (browser ? db.cart.toArray() : []));
 	onMount(() => {
 		cartLen = liveQuery(() => db.cart.toArray());
-		console.log(cartLen);
 	});
 </script>
 
 <section class="w-full px-0 mx-0">
 	<nav class="flex lg:flex-row flex-col gap-y-4 items-center justify-between  w-full shadow-lg p-5">
 		<ul>
-			<li class="text-4xl font-bold">Dexie-store</li>
+			<li class="text-4xl font-bold hover:underline-offset-4 decoration-red-500 hover:text-red-500">
+				<a href="/">Dexie-store</a>
+			</li>
 		</ul>
 		<ul
 			class="uppercase flex lg:flex-row flex-col text-lg font-sans gap-x-4 items-center justify-center"
 		>
-			<li class=" hover:underline-offset-4 decoration-red-500 hover:text-red-500  ">
+			<li class=" hover:underline-offset-4 decoration-red-500 hover:text-red-500 ">
 				<a href="/">Home</a>
 			</li>
 			<li class=" hover:underline-offset-4 decoration-red-500 hover:text-red-500">
