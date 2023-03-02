@@ -24,7 +24,7 @@
 			</div>
 		</div>
 		<div
-			class="flex gap-4 flex-col items-start justify-center col-span-1 object-cover object-right h-[20rem] w-full bg-[url('img/category-2.png')]"
+			class="flex gap-4 flex-col items-start justify-center col-span-1 object-cover object-right h-[20rem] w-full bg-[url('./img/category-2.png')]"
 		>
 			<div class="font-sans font-bold  mx-6">
 				<h1 class=" font-extrabold text-2xl text-slate-600">Men's Fashion</h1>
@@ -36,7 +36,7 @@
 			</div>
 		</div>
 		<div
-			class="flex gap-4 flex-col items-start justify-center col-span-1 object-cover object-right h-[20rem] w-full bg-[url('img/category-3.png')]"
+			class="flex gap-4 flex-col items-start justify-center col-span-1 object-cover object-right h-[20rem] w-full bg-[url('./img/category-3.png')]"
 		>
 			<div class="font-sans font-bold  mx-6">
 				<h1 class="font-extrabold text-slate-600 text-2xl ">Kid's Fashion</h1>
@@ -48,7 +48,7 @@
 			</div>
 		</div>
 		<div
-			class="flex gap-4 flex-col items-start justify-center col-span-1 object-cover object-right h-[20rem] w-full bg-[url('img/category-4.png')]"
+			class="flex gap-4 flex-col items-start justify-center col-span-1 object-cover object-right h-[20rem] w-full bg-[url('./img/category-4.png')]"
 		>
 			<div class="font-sans font-bold  mx-6">
 				<h1 class="font-extrabold text-slate-600 text-2xl ">Cosmetics</h1>
@@ -60,7 +60,7 @@
 			</div>
 		</div>
 		<div
-			class="flex gap-4 flex-col items-start justify-center col-span-1 object-cover object-right h-[20rem] w-full bg-[url('img/category-5.png')]"
+			class="flex gap-4 flex-col items-start justify-center col-span-1 object-cover object-right h-[20rem] w-full bg-[url('./img/category-5.png')]"
 		>
 			<div class="font-sans font-bold  mx-6">
 				<h1 class="font-extrabold text-slate-600 text-2xl ">Cosmetics</h1>
